@@ -27,18 +27,19 @@ isMobileDevice: sets drop down as modal if device is mobile
 */
 var React = require('react');
 var ReactDOM = require('react-dom');
-var listensToClickOutside = require('./OnClickHandler');
-var helpers = require('./helpers');
+var listensToClickOutside = require('../dependencies/js/onClickHandler');
+var helpers = require('../dependencies/js/helpers');
 var isEqual = require('lodash.isequal');
-var Validations = require('./validations');
-var Modal = require('./Modal');
+var Validations = require('../dependencies/js/validations');
+var Modal = require('../Modal/Modal.jsx');
 var OPTIONS_TEXT = 'optionsText';
 var OPTIONS_VALUE = 'optionsValue';
 var OPTIONS_LABEL = 'optionsLabel';
 var SEARCH_KEYS = 'searchKeys';
 var OPTIONS_RENDERER = 'optionsRenderer';
 var INDEX = "__index__";
-var helperObj = new helpers();
+var helperObj = new helpers.default();
+//require('css!./Multiselect.css')
 var RichMultiSelect = (function (_super) {
     __extends(RichMultiSelect, _super);
     function RichMultiSelect(props) {
@@ -62,9 +63,9 @@ var RichMultiSelect = (function (_super) {
     }
     RichMultiSelect.prototype.componentDidMount = function () {
         var _this = this;
-        /*this.clickOutsideHandler = new listensToClickOutside(ReactDOM.findDOMNode(this.refs['RichMultiSelect']), function () { _this.toggleDisplay(true); });
+        this.clickOutsideHandler = new listensToClickOutside.default(ReactDOM.findDOMNode(this.refs['RichMultiSelect']), function () { _this.toggleDisplay(true); });
         this.eventHandleKeyPress = this.handleOutSideKeyPress.bind(this);
-        window.addEventListener('keydown', this.eventHandleKeyPress);*/
+        window.addEventListener('keydown', this.eventHandleKeyPress);
     };
     RichMultiSelect.prototype.componentWillUnmount = function () {
         //this.clickOutsideHandler.dispose();
@@ -255,7 +256,7 @@ var RichMultiSelect = (function (_super) {
         //this is when state is not yet filled and isValid is called
         /*if(this.state.selectedIndices == undefined)
             values = this.props.values*/
-        validationObj = Validations.validationHandler(values, this.props.validations);
+        validationObj = Validations.default.validationHandler(values, this.props.validations);
         this.setState({
             isShowErrors: isShowErrors,
             isValid: validationObj['isValid'],

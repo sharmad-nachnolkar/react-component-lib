@@ -6,7 +6,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var React = require('react');
 var ReactDOM = require('react-dom');
-var OutsideClickHandler = require('./OnClickHandler');
+var OutsideClickHandler = require('../dependencies/js/onClickHandler');
 var Modal = (function (_super) {
     __extends(Modal, _super);
     function Modal(props) {
@@ -31,7 +31,7 @@ var Modal = (function (_super) {
     Modal.prototype.componentDidMount = function () {
         var _this = this;
         if (this.props.isCloseOnOutSideClick)
-            this.clickOutsideHandler = new OutsideClickHandler(ReactDOM.findDOMNode(this.refs['Modal']), function () {
+            this.clickOutsideHandler = new OutsideClickHandler.default(ReactDOM.findDOMNode(this.refs['Modal']), function () {
                 _this.handleClose(true);
             });
         if (this.props.isCloseOnEscape)

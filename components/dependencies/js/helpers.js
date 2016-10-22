@@ -66,4 +66,4 @@ var Helper = (function () {
     };
     return Helper;
 }());
-module.exports = Helper;
+export default Helper

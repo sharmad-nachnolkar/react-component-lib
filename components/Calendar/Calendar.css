@@ -1,0 +1,221 @@
+/* hover background color used for all quote form widget selectable items/inputs */
+
+
+/*Breakpoints variables (media queries)*/
+
+
+/* arrow css mixin */
+
+.w--calendar{
+	position: relative;
+	cursor: pointer;
+	display: inline-block;
+	margin-right:15px;
+	width:100%;
+}
+
+.w--calendar .error-label{
+	font-size: 12px;
+	color:red;
+	margin-top: 3px;
+}
+
+.w--calendar:focus{
+	outline:none;
+}
+
+.w--calendar.w--calendar-column-2 .w--calendar_dd{
+	width: 582px;
+}
+
+.w--calendar .label_minimised{
+	position: absolute;
+	font-size: 12px;
+	opacity: 0.7;
+	top:3px;
+	left:0px;
+}
+
+.w--calendar .label_full{
+	color: rgba(49,68,81,0.7);
+}
+
+.w--calendar .w--calendar_edit{
+	position: absolute;
+	top:18px;
+	width:18px;
+	height:18px;
+	right: 5px;
+	background-image: url('../dependencies/images/calendar.png');
+	background-size:18px 17px;
+	background-repeat: no-repeat;
+}
+
+.w--calendar .w--calendar_handle{
+	position: relative;
+	border-bottom: 1px solid rgba(49,68,81,.4);
+	padding: 19px 65px 0px 0px;
+}
+
+.w--calendar .w--calendar_month{
+	display: inline-block;
+}
+
+.w--calendar .w--calendar_month_header{
+	background: #fff;
+	padding: 10px 60px;
+}
+
+.w--calendar .w--calendar_month_table{
+	padding: 10px 30px;
+}
+
+.w--calendar .w--calendar_dd{
+	position: absolute;
+	top:100%;
+	background: #fff;
+	border-radius:3px;
+	padding:0px;
+	box-shadow: 0px 2px 25px 0px rgba(0,0,0,0.12);
+	z-index:300;
+	-webkit-transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+	        transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+	-webkit-transform: scaleY(0);
+	        transform: scaleY(0);
+	opacity:0;
+	-webkit-transform-origin: 0% 0%;
+	        transform-origin: 0% 0%;
+}
+
+.w--calendar .w--calendar_dd .w--calendar_prev, .w--calendar .w--calendar_dd .w--calendar_next{
+	-webkit-transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+	        transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+	position: absolute;
+	left: 12px;
+	top: 6px;
+	background: transparent;
+	border-radius: 20px;
+	padding: 4px 7px;
+	width:30px;
+	height:30px;
+	font-size:18px;
+	line-height:1em;
+}
+
+.w--calendar .w--calendar_dd .w--calendar_prev:hover, .w--calendar .w--calendar_dd .w--calendar_next:hover{
+	background: rgba(204, 204, 204, 0.52);
+}
+
+.w--calendar .w--calendar_dd .w--calendar_next{
+	right:12px;
+	left:auto;
+}
+
+.w--calendar .w--calendar_dd.reveal{
+	-webkit-transform: scaleY(1);
+	        transform: scaleY(1);
+	opacity:1;
+	z-index: 100;
+}
+
+.w--calendar .w--calendar_dd table th{
+	background: shade(#FF704C, 5%);
+	text-align:center;
+}
+
+.w--calendar .w--calendar_dd table td{
+	text-align: center;
+	padding: 5px 8px;
+	border-radius: 20px;
+}
+
+.w--calendar .w--calendar_dd table td:hover{
+	background:#efeff4;
+}
+/*  New picker css */
+
+.date-picker-header{
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 12px;
+	line-height: 16px;
+	letter-spacing: 1px;
+}
+
+.date-div {
+	width:73px;
+	display: inline-block;
+	text-align: center;
+	font-size: 16px;
+	margin: 20px 0;
+}
+.selected-date, .unselected-date{
+	margin: 20px 0;
+}
+
+.unselected-date{
+	color: rgba(49,68,81,0.42)
+}
+
+.selected-date{
+	color: #314451;
+	position: relative;
+}
+
+.selected-date:before, .selected-date:after{
+	content: '';
+	display: block;
+	position: absolute;
+	border-bottom: 1px solid #FF704C;
+	width: 39px;
+	top: -10px;
+	left: 16px;
+}
+
+.selected-date:after{
+	top:30px;
+}
+
+.arrow-down, .arrow-up{
+	position: relative;
+	border-width: 9px 5px;
+	border-style: solid;
+	border-color: transparent;
+	height:0;
+	width:0;
+	padding:0;
+	margin: auto;
+}
+
+.arrow-down{
+	border-top-color:rgba(49,68,81,0.49);
+}
+.arrow-up{
+	border-bottom-color:rgba(49,68,81,0.49);
+}
+.group-btn{
+	text-align: center;
+}
+.group-btn .w--button{
+	font-size: 12px;
+}
+.group-btn .w--button--link{
+	color: #314451;
+}
+.bike_ModalDatePicker .error-label{
+	font-size: 12px;
+	color:red;
+	margin-top: 3px;
+}
+.bike_ModalDatePicker .w--text_input:after{
+	content: '';
+	position: absolute;
+	background-image: url('../dependencies/images/calendar.png');
+	background-size: 18px 17px;
+	background-repeat: no-repeat;
+	right: 2px;
+	top: 38%;
+	display: block;
+	width: 18px;
+	height: 17px;
+}
