@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import MultiSelect from './components/Multiselect/Multiselect.jsx'
 import Calendar from './components/Calendar/Calendar.jsx'
 
-var msProps = {
+/*var msProps = {
 	dataSource:[
 		{key:'apple',value:'a'},
 		{key:'oranges',value:'o'},
@@ -19,3 +19,8 @@ var msProps = {
 
 ReactDOM.render(<MultiSelect {...msProps}/>, document.querySelector("#content"))
 ReactDOM.render(<Calendar customClass='large-width'/>, document.querySelector("#content2"))
+*/
+module.exports = {
+	MultiSelect:MultiSelect,
+	Calendar:Calendar
+}
